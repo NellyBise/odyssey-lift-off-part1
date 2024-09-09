@@ -4,6 +4,7 @@ const typeDefs = gql`
         "Get tracks array for homepage grid"
         tracksForHome: [Track!]!
         track(id: ID!): Track
+        module(id: ID!): Module!
     }
 
     type Mutation{
@@ -34,6 +35,9 @@ const typeDefs = gql`
         id : ID!
         title: String!
         length: Int
+        videoUrl: String
+        content: String
+
     }
 
     "Author of a complete Track or a Module"
